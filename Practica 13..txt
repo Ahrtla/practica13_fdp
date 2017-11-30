@@ -1,0 +1,147 @@
+/*
+#include<stdio.h>
+int main() {
+ FILE *archivo; //se declara la variable archivo
+ archivo = fopen("archivo.txt", "r"); //asignando a archivo el resultado de la funcion, va a regresar algo 
+ char caracteres[50];
+/*
+if (archivo != NULL) {
+ printf("El archivo se abrió correctamente.\n");
+ int res = fclose(archivo);
+ printf("fclose = %d\n", res);
+ } else {
+ printf("Error al abrir el archivo.\n");
+ printf("El archivo no existe o no se tienen permisos de lectura.\n");
+ }
+
+ if (archivo != NULL) {
+ while (feof(archivo)==0){
+ fscanf(archivo, "%s\n",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(archivo);
+ }
+ return 0;
+ 
+}
+/*
+if (archivo != NULL) {
+ printf("El archivo se abrió correctamente.");
+ printf("\nContenido del archivo:\n");
+ while (feof(archivo) == 0) {
+ fgets (caracteres, 50, archivo);
+ printf("%s", caracteres);
+ }
+ fclose(archivo);
+ }
+}
+ 
+ 
+ #include<stdio.h>
+int main() {
+ FILE *archivo; //se declara la variable archivo, permite saber donde estamos parados.
+ FILE *paralelo; //se declara la variable paralelo, permite saber donde estamos parados
+ FILE *perpendi; //se declara la variable perpendi, permite saber donde estamos parados
+ archivo = fopen("archivo.txt", "r+"); //asignando a archivo el resultado de la funcion, va a regresar algo 
+ paralelo = fopen("paralelo.txt", "r"); 
+ perpendi = fopen ("perpendi.txt","r");
+ char caracteres[100]; 
+ int p;
+ 
+  if (archivo != NULL) {
+ while (feof(archivo)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(archivo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(archivo);
+ }
+ printf("\nSi desea un vector // al de arriba oprimir 1, y si lo desea perpendicular oprima 0\n");
+ scanf("%d", p);
+ if (p=1){
+  fscanf(paralelo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }else{
+    fscanf(perpendi, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+}
+
+ #include<stdio.h>
+int main() {
+ FILE *archivo; //se declara la variable archivo, permite saber donde estamos parados.
+ FILE *paralelo; //se declara la variable paralelo, permite saber donde estamos parados
+ FILE *perpendi; //se declara la variable perpendi, permite saber donde estamos parados
+ archivo = fopen("archivo.txt", "r+"); //asignando a archivo el resultado de la funcion, va a regresar algo 
+ paralelo = fopen("paralelo.txt", "r");
+ perpendi = fopen ("perpendi.txt","r");
+ char caracteres[50]; 
+ int p;
+ 
+  if (archivo != NULL) {
+ while (feof(archivo)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(archivo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(archivo);
+ }
+ printf("\nSi desea un vector // al de arriba oprimir 1, y si lo desea perpendicular oprima 0\n");
+ scanf("%d", p);
+ if (p == 'Q'){
+   if (perpendi != NULL) {
+ while (feof(perpendi)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(perpendi, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(perpendi);
+ }
+ }else{
+    if (paralelo != NULL) {
+ while (feof(paralelo)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(paralelo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(paralelo);
+ }
+ 
+}
+*/
+ #include<stdio.h>
+int main() {
+ FILE *archivo; //se declara la variable archivo, permite saber donde estamos parados.
+ FILE *paralelo; //se declara la variable paralelo, permite saber donde estamos parados
+ FILE *perpendi; //se declara la variable perpendi, permite saber donde estamos parados
+ archivo = fopen("archivo.txt", "r+"); //asignando a archivo el resultado de la funcion, va a regresar algo 
+ paralelo = fopen("paralelo.txt", "r");
+ perpendi = fopen ("perpendi.txt","r");
+ char caracteres[50]; 
+ int p;
+ 
+  if (archivo != NULL) {
+ while (feof(archivo)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(archivo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(archivo);
+ }
+ printf("\nSi desea un vector // al de arriba oprimir P, y si lo desea perpendicular oprima p\n");
+ scanf ("%d", p);
+ 
+ if ( p == 'Q' ){
+    if (perpendi != NULL) {
+ while (feof(perpendi)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(perpendi, "%s",caracteres);
+ printf("%s\n", caracteres); 
+ }
+ fclose(perpendi);
+ }
+ }else{
+    if (paralelo != NULL) {
+ while (feof(paralelo)==0){ //feof permite saber cuando termine el archivo 
+ fscanf(paralelo, "%s",caracteres);
+ printf("%s\n", caracteres);
+ }
+ fclose(paralelo);
+ }
+}
+ 
+}
